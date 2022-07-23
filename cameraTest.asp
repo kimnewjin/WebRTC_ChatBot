@@ -1,0 +1,35 @@
+
+
+
+<%
+
+	
+	
+%>
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<!--#include virtual="/common/asp/incMeta.asp"-->
+	<script language="javascript">	
+		$(function(){
+			$("#camera").change(function(e){
+					$("#pic").attr("src",URL.createObjectURL(e.target.files[0]));
+			});
+
+			$("#camorder").change(function(e){
+					$("#mov").attr("src",URL.createObjectURL(e.target.files[0]));
+			});
+		});
+
+
+	</script>
+</head>
+<body>	
+		<input type="file" id="camera" name="camera" capture="camera" accpet="image/*"/><br/>
+		<img id="pic" style="width:100%;">
+		<hr>
+		<input type="file" id="camorder" name="camcorder" captuer="camcorder" accept="video/*"/><br/>
+		<video id="mov" width="100%" autoplay="yes" controls="true"></video>
+</body>
+</html>

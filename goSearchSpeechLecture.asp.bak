@@ -1,0 +1,10 @@
+<!--#include virtual="/config/asp/bof.asp"-->
+<!--#include virtual="/common/asp/siteFunction.asp"-->
+<!--#include virtual="/Config/asp/paymentFunction.asp"-->
+<%
+	speachValue = Trim(getData("speachValue"))
+
+	speachValue = unescape(speachValue)
+
+	Response.Write speachValue
+%>
